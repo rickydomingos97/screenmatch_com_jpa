@@ -11,12 +11,13 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	private SerieRepository repositorio;
 
-    public ScreenmatchApplication(SerieRepository repositorio) {
-        this.repositorio = repositorio;
-    }
+	public ScreenmatchApplication(SerieRepository repositorio) {
+		this.repositorio = repositorio;
+	}
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		SpringApplication.run(ScreenmatchApplication.class, args);
+
 	}
 
 	@Override

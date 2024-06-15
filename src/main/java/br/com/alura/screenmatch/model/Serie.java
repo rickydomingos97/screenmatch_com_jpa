@@ -1,8 +1,5 @@
 package br.com.alura.screenmatch.model;
 
-import br.com.alura.screenmatch.service.ConsultaChatGPT;
-import br.com.alura.screenmatch.service.ConsultaLibreTranslate;
-import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -38,6 +35,9 @@ public class Serie {
 
     @Transient
     private List<Episodio> episodios = new ArrayList<>();
+
+    // constructor padrao pois a JPA exige um construtor mesmo sem parametros
+    public Serie() {}
 
     public Serie(DadosSerie dadosSerie) {
         this.titulo = dadosSerie.titulo();
