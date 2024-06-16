@@ -27,7 +27,7 @@ public class Serie {
 
     public Serie() {}
 
-    public Serie(DadosSerie dadosSerie) {
+    public Serie(DadosSerie dadosSerie){
         this.titulo = dadosSerie.titulo();
         this.totalTemporadas = dadosSerie.totalTemporadas();
         this.avaliacao = OptionalDouble.of(Double.valueOf(dadosSerie.avaliacao())).orElse(0);
@@ -35,7 +35,6 @@ public class Serie {
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
         this.sinopse = dadosSerie.sinopse();
-        //this.sinopse = ConsultaLibreTranslate.obterTraducao(dadosSerie.sinopse()).trim();
         //this.sinopse = ConsultaChatGPT.obterTraducao(dadosSerie.sinopse()).trim();
     }
 
