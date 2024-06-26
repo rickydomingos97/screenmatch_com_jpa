@@ -26,4 +26,5 @@ public class SerieController {
                         s.getPoster(), s.getSinopse()))
                 .collect(Collectors.toList());
     }
+
 }
