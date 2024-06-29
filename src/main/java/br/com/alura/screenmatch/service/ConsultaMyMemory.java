@@ -8,7 +8,8 @@ import java.net.URLEncoder;
 
 public class ConsultaMyMemory {
     public static String obterTraducao(String text) {
-        ObjectMapper mapper = new ObjectMapper();
+       // ObjectMapper mapper = new ObjectMapper();
+        ConverteDados conversor = new ConverteDados();
 
         ConsumoApi consumo = new ConsumoApi();
 
@@ -19,12 +20,14 @@ public class ConsultaMyMemory {
 
         String json = consumo.obterDados(url);
 
-        DadosTraducao traducao;
-        try {
-            traducao = mapper.readValue(json, DadosTraducao.class);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+//        DadosTraducao traducao;
+//        try {
+//            traducao = mapper.readValue(json, DadosTraducao.class);
+//        } catch (JsonProcessingException e) {
+//            throw new RuntimeException(e);
+//        }
+
+        DadosTraducao traducao = conversor.obterDados(json, DadosTraducao.class);
 
         return traducao.responseData().translatedText;
     }

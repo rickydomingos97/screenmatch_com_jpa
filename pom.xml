@@ -52,6 +52,14 @@
 			<version>0.14.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/net.sf.okapi.connectors/okapi-connector-mymemory -->
+		<dependency>
+			<groupId>net.sf.okapi.connectors</groupId>
+			<artifactId>okapi-connector-mymemory</artifactId>
+			<version>1.46.0</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>net.clojars.suuft</groupId>
 			<artifactId>libretranslate-java</artifactId>
@@ -68,6 +76,7 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 
 		<dependency>
 			<groupId>me.paulschwarz</groupId>
