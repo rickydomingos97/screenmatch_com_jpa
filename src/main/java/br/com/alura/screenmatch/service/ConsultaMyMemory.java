@@ -14,7 +14,9 @@ public class ConsultaMyMemory {
         ConsumoApi consumo = new ConsumoApi();
 
         String texto = URLEncoder.encode(text);
-        String langpair = URLEncoder.encode("en|pt-br");
+     // String langpair = URLEncoder.encode("en|pt-br");
+        // solucao para auto detectar linguas e traduzir para portugues
+        String langpair = URLEncoder.encode("autodetect|pt-br");
 
         String url = "https://api.mymemory.translated.net/get?q=" + texto + "&langpair=" + langpair;
 
